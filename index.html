@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pakistan Job Hub — KPK Government Jobs | Verified Info</title>
-<meta name="description" content="KPK ki verified government jobs. Bina fee, bina sifarish. Roz taaza jobs.">
+<title>Pakistan Job Hub — Government Jobs Pakistan | Verified Info</title>
+<meta name="description" content="Pure Pakistan ki verified government jobs. Bina fee, bina sifarish. Roz taaza jobs.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{--green:#0b6e4f;--dark:#01411c;--light:#e8f5ee;--red:#c0392b;--amber:#b7791f;--grey:#5a6b62;--line:#dde7e1}
@@ -47,14 +47,15 @@ footer a{color:var(--green);font-weight:600}
 <body>
 <header>
   <h1>🇵🇰 Pakistan Job Hub</h1>
-  <p class="tag">KPK ki verified government jobs — bina fee, bina sifarish.</p>
+  <p class="tag">Pure Pakistan ki verified government jobs — bina fee, bina sifarish.</p>
   <p class="sub">Verified info Only: We do not hire or charge fees.</p>
   <span class="badge">Roz taaza jobs • Last update: 13 Oct 2026</span>
 </header>
 
 <div class="wrap">
   <div class="searchbar">
-    <input id="q" type="search" placeholder="Search karo: Mardan, Clerk, Court…" oninput="render()">
+    <input id="q" type="search" placeholder="Search karo: Lahore, Clerk, Court…" oninput="render()">
+    <select id="prov" onchange="render()"><option value="">Tamam Provinces</option></select>
     <select id="city" onchange="render()"><option value="">Tamam Cities</option></select>
     <select id="cat" onchange="render()"><option value="">Tamam Departments</option></select>
   </div>
@@ -82,7 +83,7 @@ footer a{color:var(--green);font-weight:600}
 
   <section class="info">
     <h2>Pakistan Job Hub kya hai?</h2>
-    <p style="font-size:14px;color:#33463b">Hum KPK ki government jobs ki verified maloomat ek jagah jama karte hain — akhbar ke ishtihar aur official portals se. Hum hire nahi karte aur koi fee nahi lete. Taaza jobs ke liye hamara Facebook page follow karein.</p>
+    <p style="font-size:14px;color:#33463b">Hum pure Pakistan ki government jobs ki verified maloomat ek jagah jama karte hain — akhbar ke ishtihar aur official portals se. Hum hire nahi karte aur koi fee nahi lete. Taaza jobs ke liye hamara Facebook page follow karein.</p>
     <p style="margin-top:10px"><a class="btn ghost" href="https://www.facebook.com/profile.php?id=1260981947108810" target="_blank" rel="noopener">Facebook Page kholo →</a></p>
   </section>
 </div>
@@ -94,32 +95,39 @@ footer a{color:var(--green);font-weight:600}
 
 <script>
 const JOBS = [
-  {org:"MTI Mardan", city:"Mardan", cat:"Health", posts:"Finance Director (Grade-13) x1", detail:"CA + 5 saal tajurba, ya ICMAP + 8 saal, ya Master's Finance + 8 saal tajurba.", apply:"www.mmckp.gov.pk (form) + courier to HR Dept, Mardan Medical Complex", last:"Ad ke 15 din ke andar", source:"Aaj, 12 Oct 2026"},
-  {org:"District Court Karak", city:"Karak", cat:"Judiciary", posts:"11 posts: Naib Qasid BPS-03 x6, Chowkidar x3, Khakrob x2", detail:"Daily wages. Tarjeeh literate ko. Age 18–40 (Chowkidar 25–40).", apply:"karakdc.peshawarhighcourt.gov.pk", last:"13 Nov 2026", source:"Express, 12 Oct 2026"},
-  {org:"PHE Division Tank", city:"Tank", cat:"Public Health Engineering", posts:"Naib Qasid BPS-03 x1", detail:"Tank domicile. Age 40 tak.", apply:"Executive Engineer, PHE Division Tank (postal)", last:"Ad ke 15 din ke andar", source:"Express, 12 Oct 2026"},
-  {org:"AA & QMG / ASC Center Nowshera Cantt", city:"Nowshera", cat:"Army / ASC", posts:"9 posts: Driver BPS-04 x4, Waiter x2, Cook x2, Labour x1", detail:"Middle / Primary taleem. Age 18–30 (retired 45 tak).", apply:"0923-610012 (postal per ad)", last:"26 Oct 2026", source:"Nation, 12 Oct 2026"},
-  {org:"District Judiciary North Waziristan", city:"North Waziristan", cat:"Judiciary", posts:"Naib Qasid x1 + Sweeper x1 (BPS-03)", detail:"Tarjeeh literate ko. Age 18–40.", apply:"districtcourtnorthwaziristan.gov.pk", last:"Ad ke 30 din ke andar", source:"Express, 12 Oct 2026"},
-  {org:"LGRD Orakzai", city:"Orakzai", cat:"Local Government", posts:"Junior Clerk / Secretary BPS-09 x2", detail:"Minority quota. FA / FSc + DIT. Age 18–30.", apply:"Assistant Director LGRD District Orakzai (postal)", last:"Ad ke 15 din ke andar", source:"Express, 12 Oct 2026"}
+  {org:"MTI Mardan", prov:"KPK", city:"Mardan", cat:"Health", posts:"Finance Director (Grade-13) x1", detail:"CA + 5 saal tajurba, ya ICMAP + 8 saal, ya Master's Finance + 8 saal tajurba.", apply:"www.mmckp.gov.pk (form) + courier to HR Dept, Mardan Medical Complex", last:"Ad ke 15 din ke andar", source:"Aaj, 12 Oct 2026"},
+  {org:"District Court Karak", prov:"KPK", city:"Karak", cat:"Judiciary", posts:"11 posts: Naib Qasid BPS-03 x6, Chowkidar x3, Khakrob x2", detail:"Daily wages. Tarjeeh literate ko. Age 18–40 (Chowkidar 25–40).", apply:"karakdc.peshawarhighcourt.gov.pk", last:"13 Nov 2026", source:"Express, 12 Oct 2026"},
+  {org:"PHE Division Tank", prov:"KPK", city:"Tank", cat:"Public Health Engineering", posts:"Naib Qasid BPS-03 x1", detail:"Tank domicile. Age 40 tak.", apply:"Executive Engineer, PHE Division Tank (postal)", last:"Ad ke 15 din ke andar", source:"Express, 12 Oct 2026"},
+  {org:"AA & QMG / ASC Center Nowshera Cantt", prov:"KPK", city:"Nowshera", cat:"Army / ASC", posts:"9 posts: Driver BPS-04 x4, Waiter x2, Cook x2, Labour x1", detail:"Middle / Primary taleem. Age 18–30 (retired 45 tak).", apply:"0923-610012 (postal per ad)", last:"26 Oct 2026", source:"Nation, 12 Oct 2026"},
+  {org:"District Judiciary North Waziristan", prov:"KPK", city:"North Waziristan", cat:"Judiciary", posts:"Naib Qasid x1 + Sweeper x1 (BPS-03)", detail:"Tarjeeh literate ko. Age 18–40.", apply:"districtcourtnorthwaziristan.gov.pk", last:"Ad ke 30 din ke andar", source:"Express, 12 Oct 2026"},
+  {org:"LGRD Orakzai", prov:"KPK", city:"Orakzai", cat:"Local Government", posts:"Junior Clerk / Secretary BPS-09 x2", detail:"Minority quota. FA / FSc + DIT. Age 18–30.", apply:"Assistant Director LGRD District Orakzai (postal)", last:"Ad ke 15 din ke andar", source:"Express, 12 Oct 2026"},
+  {org:"DHQ Hospital Mandi Bahauddin", prov:"Punjab", city:"Mandi Bahauddin", cat:"Health", posts:"Sanitary Worker / Cleaner x114", detail:"89-day contract. Age 50 tak.", apply:"In person, MS office DHQ Mandi Bahauddin", last:"26 Oct 2026", source:"Newspaper ad, 13 Oct 2026"},
+  {org:"WASA Mianwali", prov:"Punjab", city:"Mianwali", cat:"Municipal", posts:"6 posts: AD GIS, AD IT, Accountant, Draftsman, Mason, Labourer", detail:"85-day daily wages. Punjab domicile.", apply:"In person, WASA Office, Near Tameer e Millat School, Mianwali", last:"26 Oct 2026", source:"Newspaper ad, 12 Oct 2026"},
+  {org:"LWMC Lahore", prov:"Punjab", city:"Lahore", cat:"Municipal", posts:"6 contractual posts: Resident Auditor / Manager Audit, Manager GIS, DM / AM (Audit, Planning, Projects), AM Monitoring", detail:"Age 35 / 45 max.", apply:"www.jobs.punjab.gov.pk (Punjab Job Portal)", last:"26 Oct 2026", source:"Newspaper ad, 13 Oct 2026"},
+  {org:"Pakistan Sweet Home Cadet College Sohawa", prov:"Punjab", city:"Sohawa", cat:"Education", posts:"Commandant x1", detail:"Retired Col / Lt Col, 28 saal commissioned service. Age 45–55.", apply:"WhatsApp 0333-8410010 (per ad)", last:"15 Oct 2026 (near deadline)", source:"Nawaiwaqt, 12 Oct 2026"}
 ];
 
 function fillFilters(){
+  const provs=[...new Set(JOBS.map(j=>j.prov))].sort();
   const cities=[...new Set(JOBS.map(j=>j.city))].sort();
   const cats=[...new Set(JOBS.map(j=>j.cat))].sort();
+  document.getElementById('prov').innerHTML='<option value="">Tamam Provinces</option>'+provs.map(c=>`<option>${c}</option>`).join('');
   document.getElementById('city').innerHTML='<option value="">Tamam Cities</option>'+cities.map(c=>`<option>${c}</option>`).join('');
   document.getElementById('cat').innerHTML='<option value="">Tamam Departments</option>'+cats.map(c=>`<option>${c}</option>`).join('');
 }
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
 function render(){
   const q=document.getElementById('q').value.toLowerCase();
+  const prov=document.getElementById('prov').value;
   const city=document.getElementById('city').value;
   const cat=document.getElementById('cat').value;
-  const list=JOBS.filter(j=>(!city||j.city===city)&&(!cat||j.cat===cat)&&(!q||(j.org+' '+j.posts+' '+j.city+' '+j.cat).toLowerCase().includes(q)));
+  const list=JOBS.filter(j=>(!prov||j.prov===prov)&&(!city||j.city===city)&&(!cat||j.cat===cat)&&(!q||(j.org+' '+j.posts+' '+j.prov+' '+j.city+' '+j.cat).toLowerCase().includes(q)));
   document.getElementById('count').textContent=list.length+' jobs mili.';
   document.getElementById('list').innerHTML=list.length?list.map((j,i)=>`
     <article class="card">
       <h2>${esc(j.org)}</h2>
       <p>${esc(j.posts)}</p>
-      <div class="meta"><span class="pill">📍 ${esc(j.city)}</span><span class="pill">${esc(j.cat)}</span><span class="pill deadline">⏰ Last date: ${esc(j.last)}</span></div>
+      <div class="meta"><span class="pill">📍 ${esc(j.prov)} • ${esc(j.city)}</span><span class="pill">${esc(j.cat)}</span><span class="pill deadline">⏰ Last date: ${esc(j.last)}</span></div>
       <button class="btn" onclick="toggle(${i})">Details dekhein</button>
       <div class="detail" id="d${i}">
         <dl>
